@@ -25,6 +25,8 @@ export function Costas(){
 
     return (
         <div>
+
+            <p className='p-2 text-2xl font-bold'>treino de costas</p>
           
           {treinosCostas.map((item: any) => (
             <div key={item.id} className='flex flex-col gap-4'>
