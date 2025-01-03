@@ -1,32 +1,31 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Costas } from "./components/costas"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Costas } from "./components/costas";
 
 function App() {
-
-
   return (
-    <>
+    <div className="w-full max-w-screen-lg mx-auto p-4">
+      <h3 className="text-2xl font-bold text-center mb-4">Treinos</h3>
 
-    <div className="w-full p-4">
-      <h3 className="text-2xl">Treinos</h3>
+      <Tabs defaultValue="costas" className="w-full max-w-[600px] mx-auto mt-10">
+        <TabsList className="flex justify-center gap-4">
+          <TabsTrigger value="costas" className="text-sm md:text-base">
+            Costas
+          </TabsTrigger>
+          <TabsTrigger value="peitoral" className="text-sm md:text-base">
+            Peitoral
+          </TabsTrigger>
+        </TabsList>
 
-      <Tabs defaultValue="account" className="w-[400px] mt-10">
-      <TabsList>
-        <TabsTrigger value="costas">Costas</TabsTrigger>
-        <TabsTrigger value="peitoral">Peitoral</TabsTrigger>
-      </TabsList>
-      <TabsContent value="costas" className="flex flex-col items-start">
-        <Costas />
-      </TabsContent>
-      <TabsContent value="peitoral">Treino de peitoral</TabsContent>
-    </Tabs>
+        <TabsContent value="costas" className="mt-6">
+          <Costas />
+        </TabsContent>
+
+        <TabsContent value="peitoral" className="mt-6 text-center">
+          <p>Treino de Peitoral</p>
+        </TabsContent>
+      </Tabs>
     </div>
-
-  
-
-
-    </>
-  )
+  );
 }
 
-export default App
+export default App;
