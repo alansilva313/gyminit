@@ -9,7 +9,7 @@ function App() {
 
       <Tabs defaultValue="costas" className="w-full max-w-[600px] mx-auto mt-10 bg-o">
         <TabsList
-          className="flex justify-center gap-4 bg-transparent sticky top-0 z-10 w-full bg-orange-500"
+          className="flex justify-center gap-4  sticky top-0 z-10 w-full bg-white shadow-sm"
         >
           <TabsTrigger value="costas" className="text-sm md:text-base">
             Costas
